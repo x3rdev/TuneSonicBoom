@@ -74,9 +74,10 @@ minecraft {
 }
 
 mixin {
-    add sourceSets.main, "${mod_id}.refmap.json"
+    add sourceSets.main, 'mixins.tune_sonic_boom.refmap.json'
+    config 'mixins.tune_sonic_boom.json'
 
-    config "${mod_id}.mixins.json"
+    debug.export = true
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
