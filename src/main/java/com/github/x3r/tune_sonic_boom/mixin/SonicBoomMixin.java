@@ -9,8 +9,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 @Mixin(SonicBoom.class)
 public class SonicBoomMixin {
 
-    @ModifyArg(method = "lambda$tick$2",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"), index = 1)
+    @ModifyArg(method = "lambda$tick$2", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"), index = 1)
     private static float injectedSonicBoomDamage(float original) {
         return (float) (original * TuneSonicBoomConfig.sonicBoomDamageMultiplier.get());
     }

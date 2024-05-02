@@ -2,7 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.github.x3r.tune_sonic_boom.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.tune_sonic_boom.refmap.json",
   "mixins": [
     "SonicBoomMixin"
